@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sayzello</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat';
+            font-size: 17px;
+            color: linear-gradient(to right, #A6CDFD, #70E2D0);
+            line-height: 1.6;
+        }
+
+        #logo {
+            background-image: url('logo-small.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; /* Center the background image horizontally */
+            height: 15vh;
+            background-color: #fcfcfc;
+        }
+
+        #showcase {
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            color: white;
+        }
+
+        #showcase h1 {
+            font-size: 59px;
+            line-height: 1.2;
+            color: white;
+        }
+
+        #showcase h2 {
+            font-size: 25px;
+            line-height: 1.2;
+            position: relative;
+        }
+
+        #showcase h1 strong {
+            font-weight: bold;
+        }
+        
+        #showcase p {
+            font-size: 20px;
+        }
+
+        #process {
+            padding: 5% 10.5% 5% 6.5%;
+            background: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        #process-boxes {
+            display: flex; /* Use flex container for horizontal layout */
+            justify-content: space-between; /* Distribute items evenly along the main axis */
+            align-items: center;
+            margin: 0;
+        }
+        
+        .box {
+            border: none;
+            width: 30.5%; /* Adjust the width as needed */
+            height: auto;
+            display: flex;
+            flex-direction: row; /* Display content horizontally */
+            align-items: flex-start; /* Place content at the top */
+            position: relative;
+        }
+        
+        .box-icon {
+            width: 70px; /* Make the icon fill the container */
+            height: 70px; /* Automatically adjust the height */
+        }
+        
+        .box-icon img {
+            width: 70px; /* Make the image fill the container */
+            height: 70px; /* Make the image fill the container */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 50%; /* Make the image a circle */
+        }
+        
+        .box-text {
+            font-size: 17px; /* Adjust text font size */
+        }
+
+        .bold-words {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #about-us {
+            padding: 5% 10%; /* Adjust percentages as needed for top/bottom and left/right padding */
+            background: linear-gradient(to right, #A6CDFD, #70E2D0);
+            text-align: center;
+        }
+
+        #contact-us {
+            padding: 5% 10%; /* Adjust percentages as needed for top/bottom and left/right padding */
+            background: linear-gradient(to right, #A6CDFD, #70E2D0);
+            text-align: center;
+        }
+
+        /* Style section headings */
+        h1 {
+            font-size: 47px; /* Slightly smaller heading size */
+            margin-bottom: 20px; /* Add margin to separate headings from content */
+        }
+
+        /* Style section paragraphs */
+        p {
+            font-size: 18px; /* Slightly larger text size */
+            margin-bottom: 20px; /* Add margin to separate paragraphs */
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px; /* Adjust the height as needed */
+        }
+
+        /* Style the copyright text */
+        .copyright p {
+            margin: 0; /* Remove default margin */
+            font-size: 14px; /* Adjust the font size as needed */
+        }
+
+        .arrows {
+            width: 60px;
+            height: 72px;
+            position: absolute;
+            left: 50%;
+            margin-left: -30px;
+            bottom: 20px;
+        }
+
+        .arrows path {
+            stroke: #2994D1;
+            fill: transparent;
+            stroke-width: 1px;  
+            animation: arrow 2s infinite;
+            -webkit-animation: arrow 2s infinite; 
+        }
+
+        @keyframes arrow {
+            0% {opacity:0}
+            40% {opacity:1}
+            80% {opacity:0}
+            100% {opacity:0}
+        }
+
+        @-webkit-keyframes arrow { /*Safari and Chrome*/ 
+            0% {opacity:0}
+            40% {opacity:1}
+            80% {opacity:0}
+            100% {opacity:0}
+        }
+
+        .arrows path.a1 {
+            animation-delay:-1s;
+            -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+        }
+
+        .arrows path.a2 {
+            animation-delay:-0.5s;
+            -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+        }
+
+        .arrows path.a3 { 
+            animation-delay:0s;
+            -webkit-animation-delay:0s; /* Safari 和 Chrome */
+        }
+
+        .calendly-inline-widget {
+            margin-top: -50px;
+            margin-bottom: -70px;
+            z-index: 1; /* Set a lower z-index value than the topnav */
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "logo">
+    </div>
+    <div id = "showcase">
+        <h2>Elevate Your Workforce:</h2>
+        <h1>Unlock Elite Professionals for Unbeatable Savings and Exceptional Quality</h1>
+        <!-- Arrow animation -->
+        <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg>
+    </div>
+
+    <div id = "about-us">
+        <h1>Who Are We?</h1>
+        <p>Sayzello is an AI chatbot solutions provider, revolutionizing customer support utilizing cutting-edge technology. We specialize in crafting personalized AI chatbots that effortlessly assist customers by addressing inquiries and resolving issues. Our chatbots feature live chat support for direct interaction with customer service agents when required. With instant responses available 24/7, Sayzello <strong>enhances customer experiences</strong> while potentially <strong>reducing customer service costs</strong> by atleast <strong>70%</strong>.</p>
+    </div>
+
+    <div id="process">
+        <h1>Our Process</h1>
+        <div id="process-boxes">
+            <div class="box">
+                <div class="box-icon">
+                    <img src="number1.png" alt="Number 1 Icon">
+                </div>
+                <div class="box-text">
+                    <p><span class="bold-words">Gather Data</span>
+                        <br>In the first step, we collect all the data about the company ranging from existing website information to FAQs and any other customer service data available, to create a personalized AI bot.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-icon">
+                    <img src="number2.png" alt="Number 2 Icon">
+                </div>
+                <p><span class="bold-words">Train AI bot</span> 
+                    <br>Next, we work with the client to train the AI chatbot by personalising how they want their responses to be, and feeding it more data to teach it how to respond to all sorts of scenarios.</p>
+            </div>
+            <div class="box">
+                <div class="box-icon">
+                    <img src="number3.png" alt="Number 3 Icon">
+                </div>
+                <p><span class="bold-words">Integrate & Improve Service</span>
+                    <br>Finally, after training the bot for upto a week, we integrate it into the client's website, instantly improving customer support through quicker and more detailed responses in second.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id = "contact-us">
+        <h1>Book a Call!</h1>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/viscrow/30min" style="min-width:320px;height:700px;"></div>
+        <!-- Calendly inline widget end -->
+        <div class = "footer">
+            <div class = "copyright">
+                <p>Sayzello - @2023 All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
