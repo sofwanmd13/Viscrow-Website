@@ -79,20 +79,23 @@
         }
         
         #process-boxes {
-            display: flex; /* Use flex container for horizontal layout */
-            justify-content: space-between; /* Distribute items evenly along the main axis */
-            align-items: center;
+            display: flex;
+            flex-wrap: wrap; /* Allow boxes to wrap to the next row on small screens */
+            justify-content: space-between;
+            align-items: flex-start; /* Align items to the top */
             margin: 0;
         }
         
         .box {
             border: none;
-            width: 30.5%; /* Adjust the width as needed */
+            width: 100%; /* Initially, take full width on small screens */
+            max-width: 30%; /* Limit the width for larger screens */
             height: auto;
             display: flex;
-            flex-direction: row; /* Display content horizontally */
-            align-items: flex-start; /* Place content at the top */
+            flex-direction: row;
+            align-items: flex-start;
             position: relative;
+            margin-bottom: 20px; /* Add margin to separate boxes */
         }
         
         .box-icon {
@@ -109,6 +112,13 @@
         
         .box-text {
             font-size: 17px; /* Adjust text font size */
+        }
+
+        @media screen and (min-width: 768px) {
+            /* Adjust styles for screens with a minimum width of 768px */
+            .box {
+                width: 48%; /* Change the width as needed */
+            }
         }
 
         .bold-words {
